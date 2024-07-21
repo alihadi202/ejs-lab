@@ -62,7 +62,8 @@ app.get('/menu', (req, res ,) => {
 });
 
 app.get('/menu/:category', (req, res ,) => {
-  res.render('catagory.ejs', { restaurant: RESTAURANT , c : req.params});
+  const category = req.params.category;
+  res.render('catagory.ejs', { restaurant: RESTAURANT , category});
 });
 
 
